@@ -22,10 +22,7 @@ jobs:
   download:
     needs: build
     runs-on: ubuntu-latest
-    steps:
-#    - name: Create Directory
-#      run: mkdir -p artifacts
-      
+    steps:      
     - name: Downlaod text file
       uses: actions/download-artifact@v4
       with:
@@ -34,6 +31,7 @@ jobs:
 
     - name: Display content
       run: cat ./artifacts/hello.txt
+
 
 
 
